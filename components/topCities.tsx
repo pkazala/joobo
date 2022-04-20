@@ -4,7 +4,6 @@ import CityModal from './cityModal';
 const topCities = () => {
     const [title, changeTitle] = useState("Pracownik IT")
     const [cityNum, changeCityNum] = useState(3)
-
     const jobTitles = [
         "Frontend Developer", "Backend Developer", "Fullstack Developer", "Data Scientist"
     ]
