@@ -10,11 +10,13 @@ module.exports = {
         'dark': '#BD827E',
         'light': '#FFF7F7',
         'darker-light': '#F3EED9',
-        'joobo-gray': '#6B7280'
+        'joobo-gray': '#6B7280',
+        'lighter': '#FAFAFA'
       }
     },
     fontFamily: {
-      logo: ['Roboto']
+      logo: ['Roboto'],
+      npm: ['FiraMono']
     }
   },
   plugins: [require("daisyui")],
