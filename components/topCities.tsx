@@ -4,6 +4,7 @@ import CityModal from './cityModal';
 const topCities = () => {
     const [title, changeTitle] = useState("Pracownik IT")
     const [cityNum, changeCityNum] = useState(3)
+
     const jobTitles = [
         "Frontend Developer", "Backend Developer", "Fullstack Developer", "Data Scientist"
     ]
@@ -27,7 +28,7 @@ const topCities = () => {
         {
             name: "Kielce",
             salary: 2.321,
-            modal: "my-modal-3"
+            modal: "my-modal-4"
         }
     ];
 
@@ -47,13 +48,15 @@ const topCities = () => {
                         <figure><img src="https://api.lorem.space/image/shoes?w=400&h=300" alt="Shoes" className="w-full" /></figure>
                         <div className="card-body bg-[#FAFAFA]">
                             <h2 className="font-logo text-3xl m-2">{city.name}</h2>
-                            <p className="font-logo font-light text-3xl mb-2">{city.salary}</p>
+                            <p className="font-logo font-light text-3xl mb-2">{city.salary} zl/m</p>
                             <div className="card-actions justify-center">
                                 <CityModal>{city}</CityModal>
                             </div>
                         </div>
                     </div>
                 ).filter((e, k) => k < cityNum)}
+            </div>
+            <div className="grid grid-cols-1 justify-items-center">
                 {cityNum === 3 ? (
                     <button onClick={() => changeCityNum(topCities.length)} className="col-span-3 justify-self-center btn btn-sm btn-outline hover:bg-white text-joobo-gray">Pokaż wszystkie</button>
                 ) : (

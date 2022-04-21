@@ -1,4 +1,5 @@
 import TopCities from './topCities'
+import TopRoles from './topRoles'
 
 const body = () => {
     return (
@@ -7,8 +8,8 @@ const body = () => {
                 <div className="row-span-2 col-span-2 bg-light rounded-md">
                     <TopCities></TopCities>
                 </div>
-                <div className="col-span-2 bg-light rounded-md">
-                    <p>three</p>
+                <div className="col-span-2 bg-light rounded-md h-fit p-5">
+                    <TopRoles></TopRoles>
                 </div>
                 <div className="row-span-3 bg-light rounded-md">
                     <div className="mockup-code m-5">
