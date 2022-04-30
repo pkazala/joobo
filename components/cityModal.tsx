@@ -2,8 +2,6 @@ const cityModal = (city: any) => {
     return (
         <div>
             <label htmlFor={city.children.modal} className="btn btn-outline bg-main text-white hover:bg-light hover:text-black">Sprawdź</label>
-
-
             <input type="checkbox" id={city.children.modal} className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box bg-light font-logo">
@@ -19,7 +17,7 @@ const cityModal = (city: any) => {
                         </div>
                     </div>
                     <div className="modal-action flex justify-end">
-                        <label htmlFor={city.children.modal} className="btn btn-outline btn-sm bg-red-400 hover:bg-red-500 text-white hover:text-white">exit</label>
+                        <label htmlFor={city.children.modal} className="btn btn-sm btn-outline bg-main hover:bg-lighter text-white hover:text-black btn-circle absolute right-2 top-2">X</label>
                     </div>
                 </div>
             </div>

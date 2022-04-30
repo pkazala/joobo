@@ -2,7 +2,7 @@ import { useState } from 'react';
 import CityModal from './cityModal';
 
 const topCities = () => {
-    const [title, changeTitle] = useState("Pracownik IT")
+    const [title, changeTitle] = useState("Wszyscy")
     const [cityNum, changeCityNum] = useState(3)
 
     const jobTitles = [
@@ -46,17 +46,10 @@ const topCities = () => {
 
     return (
         <div>
-            <h1 className="col-span-3 text-start 2xl:pl-10 pl-8 font-logo font-light text-2xl text-joobo-gray m-3">Miasta z najwyższymi zarobkami dla:
-                <span className="dropdown dropdown-hover">
-                    <label tabIndex={0}>&nbsp;<span className="underline font-npm"><code>{title}</code></span></label>
-                    <ul tabIndex={0} className="dropdown-content p-3 text-2xl w-max bg-light bg-opacity-90 rounded-3xl text-start text-joobo-gray">
-                        {jobTitles.map(job => <li onClick={() => changeTitle(job)} className="fill-darker-light hover:bg-lighter hover:bg-opacity-50 cursor-pointer mt-3"><code>{job}</code></li>)}
-                    </ul>
-                </span>
-            </h1>
+            <h1 className="col-span-3 text-start 2xl:pl-10 pl-8 font-logo font-light text-2xl text-joobo-gray m-3">Miasta z najwyższymi zarobkami dla: {title} </h1>
             <div className="grid xl:grid-cols-3 grid-cols-1 justify-items-center mt-10 m-5 gap-5">
-                {topCities.map(city =>
-                    <div className="card w-9/10 3xl:w-96 bg-base-100 shadow-xl text-center">
+                {topCities.map((city, index) =>
+                    <div key={index} className="card w-9/10 3xl:w-96 bg-base-100 shadow-xl text-center">
                         <figure><img src={city.image} alt="Shoes" className="w-full" /></figure>
                         <div className="card-body bg-[#FAFAFA]">
                             <h2 className="font-logo text-3xl m-2">{city.name}</h2>

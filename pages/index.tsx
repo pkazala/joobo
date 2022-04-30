@@ -4,10 +4,9 @@ import Body from '../components/body'
 
 const Home: NextPage = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Header></Header>
       <Body></Body>
-      <h1 className="text-center text-3xl pb-10">🚀 <br /> To the moon!</h1>
     </div>
   )
 }
